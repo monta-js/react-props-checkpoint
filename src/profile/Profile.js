@@ -1,10 +1,7 @@
 import React from 'react' ;
 import PropTypes from 'prop-types';
 const Profile = (props) => {
-    const handleName = (e) => {
-        let name = props.fullName
-        alert(name);
-    }
+
     return (
         <div class="container">
                      <div class="row  bg-info text-white align-items-center  ">
@@ -12,7 +9,7 @@ const Profile = (props) => {
                             <h1>{props.fullName}</h1>
                             <h2>{props.profession}</h2>
                             <p>{props.bio}</p>
-                            <button type="button" class="btn btn-warning" onClick={handleName}>Alerte !</button>
+                            <button type="button" class="btn btn-warning" onClick={()=> props.alert(props.fullName)}>Alerte !</button>
                         </div>
                         <div class=" col-lg-6 ">
                             {props.children}  
